@@ -154,13 +154,13 @@
 		
 			<!-- Articles -->
 			<div class="row">
-                            <h2>Creacion de Personas</h2>	
+                            <h2>Listar Promedio</h2>	
                                 <!-- Form --> 
                             <div class="panel panel-default">
                                     <div class="panel-heading">
                                             <h3 class="panel-title">
                                                     <span class="glyphicon glyphicon-log-in"></span> 
-                                                    Log In
+                                                    
                                             </h3>
                                     </div>
                                     <div class="panel-body">
@@ -171,16 +171,8 @@
                                                            
                                                     %>
                                                     <form action="RegistroServlet?editar" method="POST">
-                                                     <div class="form-group">
-                                                         <input type="text" class="form-control" id="uid" name="cedula" value="<%=persona.getCedula()%>" placeholder="cedula" readonly="true">
-                                                    </div>
-                                                    <div class="form-group">
-                                                            <input type="text" class="form-control" id="uid" name="nombre" value="<%=persona.getNombre()%>" placeholder="Nombre">
-                                                    </div>
-                                                    <div class="form-group">
-                                                            <input type="text" class="form-control" id="pwd" name="apellido" value="<%=persona.getApellido()%>"  placeholder="Apellido">
-                                                    </div>
-                                                    <button type="submit" name="editar" class="btn btn-default">Editar</button>
+                                                    
+                                                    <button type="submit" name="editar" class="btn btn-default">Listar</button>
                                                      </form>
                                                     
                                                     <%
@@ -189,25 +181,9 @@
                                                        else{
                                                     %>   
                                                      <form action="RegistroServlet" method="POST">  
-                                                    <div class="form-group">
-                                                            <input type="text" class="form-control" id="uid" name="cedula" placeholder="cedula">
-                                                    </div>
-                                                    <div class="form-group">
-                                                            <input type="text" class="form-control" id="uid" name="nombre" placeholder="Nombre">
-                                                    </div>
-                                                    <div class="form-group">
-                                                            <input type="text" class="form-control" id="pwd" name="apellido" placeholder="Apellido">
-                                                    </div>
-                                                         
-                                                    
-                                                    <div class="form-group">
-                                                         <input type="checkbox" name="vehicle" value="Bike"> Bicibleta<br>
-                                                         <input type="checkbox" name="vehicle" value="Car" checked> Carros
-                                                    </div>
-                                                    
-                                                         
-                                                    <button type="submit" name="Boton1" class="btn btn-default">Registrar</button>
-                                                    <button type="submit" name="Boton2" class="btn btn-default">Boton 2</button>
+                                                      
+                                                    <button type="submit" name="Boton1" class="btn btn-default">Listar</button>
+                                                   
                                                     
                                                      </form>
                                                     <%
@@ -224,13 +200,14 @@
 			</div>
 			<hr>
 			<div class="row">
-          <h2>Lista de Personas</h2>	                  
+          <h2>Estudiantes</h2>	                  
 	  <table class="table table-striped table-sm">
               <thead>
                 <tr>
-                  <th>Cedula</th>
+                  <th>SID</th>
                   <th>Nombre</th>
                   <th>Apellido</th>
+                  <th>Email</th>
                   <th></th>
                   <th></th>
                 </tr>
